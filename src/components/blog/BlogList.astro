@@ -1,0 +1,33 @@
+---
+import FormattedDate from "../../components/FormattedDate.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  image: string;
+  slug: string;
+}
+
+const { title, description, date, image, slug } = Astro.props;
+---
+
+<a
+  class="min-h-[30%] h-auto bg-gray-800 rounded p-6 flex mb-4 cursor-pointer"
+  href={`/blog/${slug}`}
+>
+  <div>
+    <img
+      src={image === "" ? "/exp-logo.png" : image}
+      alt="logo"
+      class="w-13 h-12 mr-8"
+    />
+  </div>
+  <div class="w-full">
+    <div class="flex w-full">
+      <p class="font-bold">{title}</p>
+      <p class="ml-auto text-xs"><FormattedDate date={date} /></p>
+    </div>
+    <p class="text-xs">{description}</p>
+  </div>
+</a>
