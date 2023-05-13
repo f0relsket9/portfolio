@@ -16,7 +16,7 @@ const { title, description, date, image, slug } = Astro.props;
   class="min-h-[30%] h-auto bg-gray-800 rounded p-6 flex mb-4 cursor-pointer"
   href={`/blog/${slug}`}
 >
-  <div>
+  <div class="hidden md:block">
     <img
       src={image === "" ? "/exp-logo.png" : image}
       alt="logo"

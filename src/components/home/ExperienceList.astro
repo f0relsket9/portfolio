@@ -9,7 +9,7 @@ const { title, description, image } = Astro.props;
 ---
 
 <div class="min-h-[30%] h-auto bg-gray-800 rounded p-6 flex mb-4">
-  <div>
+  <div class="flex justify-center items-center">
     <img
       src={image === "" ? "/exp-logo.png" : image}
       alt="logo"
@@ -17,7 +17,7 @@ const { title, description, image } = Astro.props;
     />
   </div>
   <div>
-    <p class="font-bold">{title}</p>
-    <p class="text-xs">{description}</p>
+    <p class="font-bold text-2xl">{title}</p>
+    <p class="text-lg">{description}</p>
   </div>
 </div>
